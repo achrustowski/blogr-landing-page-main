@@ -1,3 +1,42 @@
+:root {
+  /* CTA text */
+  --clr-primary-100: hsl(356, 100%, 66%);
+  /* CTA hover bg */
+  --clr-primary-200: hsl(355, 100%, 74%);
+  /* Headings */
+  --clr-primary-300: hsl(208, 49%, 24%);
+
+  /* Text */
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  /* Footer text */
+  --clr-neutral-200: hsl(240, 2%, 79%);
+  /* Body copy */
+  --clr-neutral-300: hsl(207, 13%, 34%);
+  /* Footer bg */
+  --clr-neutral-400: hsl(240, 10%, 16%);
+
+  /* Bg gradient - Intro/CTA mobile nav */
+  --gr-intro-100: hsl(13, 100%, 72%);
+  --gr-intro-200: hsl(353, 100%, 62%);
+
+  /* Bg gradient - body */
+  --gr-body-100: hsl(237, 17%, 21%);
+  --gr-body-200: hsl(237, 23%, 32%);
+
+  /* Font families */
+  --ff-primary: 'Overpass', sans-serif;
+  --ff-secondary: 'Ubuntu', sans-serif;
+
+  /* Font primary weights */
+  --fw-primary-300: 300;
+  --fw-primary-600: 600;
+
+  /* Font secondary weights */
+  --fw-secondary-400: 400;
+  --fw-secondary-500: 500;
+  --fw-secondary-700: 700;
+}
+
 /* Box sizing rules */
 *,
 *::before,
