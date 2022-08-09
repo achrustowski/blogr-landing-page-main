@@ -16,12 +16,12 @@
   --clr-neutral-400: hsl(240, 10%, 16%);
 
   /* Bg gradient - Intro/CTA mobile nav */
-  --gr-intro-100: hsl(13, 100%, 72%);
-  --gr-intro-200: hsl(353, 100%, 62%);
+  --gr-intro-100: rgb(255, 143, 112);
+  --gr-intro-200: rgb(255, 61, 84);
 
   /* Bg gradient - body */
-  --gr-body-100: hsl(237, 17%, 21%);
-  --gr-body-200: hsl(237, 23%, 32%);
+  --gr-body-100: #2c2d3f;
+  --gr-body-200: #3f4164;
 
   /* Font families */
   --ff-primary: 'Overpass', sans-serif;
@@ -102,4 +102,38 @@ svg {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Colours */
+.clr-primary-100 {
+  color: var(--clr-primary-100);
+}
+.clr-primary-200 {
+  color: var(--clr-primary-200);
+}
+.clr-primary-300 {
+  color: var(--clr-primary-300);
+}
+
+.clr-secondary-100 {
+  color: var(--clr-neutral-100);
+}
+.clr-secondary-200 {
+  color: var(--clr-neutral-200);
+}
+.clr-secondary-300 {
+  color: var(--clr-neutral-300);
+}
+.clr-secondary-400 {
+  color: var(--clr-neutral-400);
+}
+
+/* Bg colours */
+.bg-gradient-intro {
+  background: rgb(255, 61, 84);
+  background: linear-gradient(270deg, rgba(255, 61, 84, 1) 0%, rgba(255, 143, 112, 1) 100%);
+}
+.bg-gradient-body {
+  background: rgb(44, 45, 63);
+  background: linear-gradient(90deg, rgba(44, 45, 63, 1) 0%, rgba(63, 65, 100, 1) 100%);
 }
