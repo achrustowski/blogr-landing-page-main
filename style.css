@@ -128,7 +128,7 @@ svg {
   color: var(--clr-neutral-400);
 }
 
-/* Bg colours */
+/* Bg gradients */
 .bg-gradient-intro {
   background: rgb(255, 61, 84);
   background: linear-gradient(270deg, rgba(255, 61, 84, 1) 0%, rgba(255, 143, 112, 1) 100%);
