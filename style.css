@@ -24,8 +24,8 @@
   --gr-body-200: #3f4164;
 
   /* Font families */
-  --ff-primary: 'Overpass', sans-serif;
-  --ff-secondary: 'Ubuntu', sans-serif;
+  --ff-primary: "Overpass", sans-serif;
+  --ff-secondary: "Ubuntu", sans-serif;
 
   /* Font primary weights */
   --fw-primary-300: 300;
@@ -64,8 +64,8 @@
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -127,27 +127,44 @@ svg {
   color: var(--clr-primary-300);
 }
 
-.clr-secondary-100 {
+.clr-neutral-100 {
   color: var(--clr-neutral-100);
 }
-.clr-secondary-200 {
+.clr-neutral-200 {
   color: var(--clr-neutral-200);
 }
-.clr-secondary-300 {
+.clr-neutral-300 {
   color: var(--clr-neutral-300);
 }
-.clr-secondary-400 {
+.clr-neutral-400 {
   color: var(--clr-neutral-400);
+}
+
+.padding-block {
+  padding-block: 16rem;
 }
 
 /* Bg gradients */
 .bg-gradient-intro {
   background-color: rgb(255, 61, 84);
-  background: linear-gradient(270deg, rgba(255, 61, 84, 1) 0%, rgba(255, 143, 112, 1) 100%);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 61, 84, 1) 0%,
+    rgba(255, 143, 112, 1) 100%
+  );
 }
 .bg-gradient-body {
   background: rgb(44, 45, 63);
-  background: linear-gradient(90deg, rgba(44, 45, 63, 1) 0%, rgba(63, 65, 100, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(44, 45, 63, 1) 0%,
+    rgba(63, 65, 100, 1) 100%
+  );
+}
+
+/* Bg colors */
+.bg-color-editor {
+  background-color: var(--clr-neutral-100);
 }
 
 /* Bg images */
@@ -156,6 +173,20 @@ svg {
     linear-gradient(to left, rgba(255, 61, 84, 0.9), rgba(255, 143, 112, 0.9));
   background-position: 22% 52%;
   background-repeat: no-repeat;
+  background-size: auto;
+}
+.bg-img-editor {
+  background-image: url(./images/illustration-editor-desktop.svg);
+  background-position: 130% 50%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+.bg-img-phones {
+  background: url(./images/illustration-phones.svg),
+    url(./images/bg-pattern-circles.svg),
+    linear-gradient(to right, rgba(44, 45, 63, 1) 0%, rgba(63, 65, 100, 1) 100%);
+  background-position: 10% 50%, -55% 90%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: auto;
 }
 
@@ -215,4 +246,14 @@ svg {
 }
 .fs-900 {
   font-size: var(--fs-900);
+}
+
+/* General styling */
+button {
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
 }
