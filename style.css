@@ -77,7 +77,6 @@ html:focus-within {
 html,
 body {
   height: 100%;
-  background-color: burlywood;
 }
 
 /* Set core body defaults */
@@ -141,7 +140,7 @@ svg {
 }
 
 .padding-block {
-  padding-block: 16rem;
+  padding-block: 4rem;
 }
 
 /* Bg gradients */
@@ -256,4 +255,51 @@ button {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  --max-width: 1440px;
+  --container-padding: 2rem;
+
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+  padding-block: 4rem;
+}
+
+/* Header */
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-flow-start {
+  display: flex;
+  align-items: center;
+}
+
+.nav-wrapper {
+  display: grid;
+  position: relative;
+}
+
+.primary-navigation,
+.primary-navigation > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.secondary-navigation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+nav > ul > li > img {
+  display: inline-block;
 }
