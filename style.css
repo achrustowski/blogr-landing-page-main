@@ -24,8 +24,8 @@
   --gr-body-200: #3f4164;
 
   /* Font families */
-  --ff-primary: 'Overpass', sans-serif;
-  --ff-secondary: 'Ubuntu', sans-serif;
+  --ff-primary: "Overpass", sans-serif;
+  --ff-secondary: "Ubuntu", sans-serif;
 
   /* Font primary weights */
   --fw-primary-300: 300;
@@ -64,8 +64,8 @@
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -146,11 +146,19 @@ svg {
 /* Bg gradients */
 .bg-gradient-intro {
   background-color: rgb(255, 61, 84);
-  background: linear-gradient(270deg, rgba(255, 61, 84, 1) 0%, rgba(255, 143, 112, 1) 100%);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 61, 84, 1) 0%,
+    rgba(255, 143, 112, 1) 100%
+  );
 }
 .bg-gradient-body {
   background: rgb(44, 45, 63);
-  background: linear-gradient(90deg, rgba(44, 45, 63, 1) 0%, rgba(63, 65, 100, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(44, 45, 63, 1) 0%,
+    rgba(63, 65, 100, 1) 100%
+  );
 }
 
 /* Bg colors */
@@ -164,7 +172,7 @@ svg {
 /* Bg images */
 .bg-img-intro {
   background-image: url(./images/bg-pattern-intro-desktop.svg),
-    linear-gradient(to left, rgba(255, 61, 84, 0.9), rgba(255, 143, 112, 0.9));
+    linear-gradient(to left, rgba(255, 61, 84, 0.9), rgba(255, 143, 112, 1));
   background-position: 22% 52%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -176,7 +184,8 @@ svg {
   background-size: 40%;
 }
 .bg-img-phones {
-  background: url(./images/illustration-phones.svg), url(./images/bg-pattern-circles.svg),
+  background: url(./images/illustration-phones.svg),
+    url(./images/bg-pattern-circles.svg),
     linear-gradient(to right, rgba(44, 45, 63, 1) 0%, rgba(63, 65, 100, 1) 100%);
   background-position: 10% 50%, -55% 90%;
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -247,6 +256,11 @@ svg {
   font-size: var(--fs-900);
 }
 
+/* Utilities */
+.hidden {
+  opacity: 0;
+}
+
 /* General styling */
 button {
   border: none;
@@ -287,7 +301,11 @@ ul {
   position: relative;
 }
 
-.primary-navigation,
+.primary-navigation {
+  width: 300px;
+  padding-left: 3rem;
+}
+
 .primary-navigation > ul {
   display: flex;
   align-items: center;
