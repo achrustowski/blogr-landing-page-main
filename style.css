@@ -455,7 +455,7 @@ footer {
 }
 
 .editor-container p {
-  padding-top: 1.7rem;
+  padding-top: 1.3rem;
   line-height: 1.7rem;
   letter-spacing: 0.01rem;
   word-spacing: 0.08rem;
@@ -495,6 +495,7 @@ footer {
 .phones-container > img {
   position: absolute;
   transform: translateY(-21%) translateX(-8%);
+  width: 50%;
 }
 
 /* Laptop section */
@@ -537,4 +538,69 @@ footer {
 .primary-footer-wrapper li {
   padding-block: 0.3rem;
   opacity: 0.8;
+}
+
+/* Media queries */
+@media (max-width: 65em) {
+  .editor-container p {
+    width: 45ch;
+    padding-right: 0rem;
+  }
+
+  .top p,
+  .bottom p {
+    width: 45ch;
+    padding-right: 0rem;
+  }
+
+  .phones-container > .paragraph > p {
+    width: 45ch;
+    padding-right: 0rem;
+  }
+
+  .primary-footer-logo,
+  .primary-footer-nav-product,
+  .primary-footer-nav-company,
+  .primary-footer-nav-connect {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .phones-container > img {
+    position: absolute;
+    transform: translateY(-21%) translateX(-8%);
+    width: 55%;
+  }
+}
+
+@media (max-width: 60em) {
+  .editor-container p {
+    width: 41ch;
+    padding-right: 0rem;
+  }
+
+  .top p,
+  .bottom p {
+    width: 41ch;
+    padding-right: 0rem;
+  }
+
+  .phones-container > .paragraph > p {
+    width: 41ch;
+    padding-right: 0rem;
+  }
+
+  .phones-container > img {
+    position: absolute;
+    transform: translateY(-10%) translateX(-8%);
+    width: 50%;
+  }
+}
+
+@media (max-width: 50em) {
+  .phones-container > img {
+    position: absolute;
+    transform: translateY(0%) translateX(-8%);
+    width: 50%;
+  }
 }
