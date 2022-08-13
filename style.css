@@ -174,7 +174,7 @@ svg {
 .bg-img-intro {
   background-image: url(./images/bg-pattern-intro-desktop.svg),
     linear-gradient(to left, rgba(255, 61, 84, 0.9), rgba(255, 143, 112, 1));
-  background-position: 25.5% 51.5%;
+  background-position: 25.7% 51.5%;
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -182,7 +182,7 @@ svg {
   background-image: url(./images/illustration-editor-desktop.svg);
   background-position: 153% 50%;
   background-repeat: no-repeat;
-  background-size: 63%;
+  background-size: 63.75%;
 }
 .bg-img-phones {
   background: url(./images/illustration-phones.svg),
@@ -269,7 +269,7 @@ svg {
 button {
   border: none;
   background: none;
-  line-height: 1.5rem;
+  line-height: 1.4rem;
 }
 
 a {
@@ -286,7 +286,7 @@ ul {
 
   width: min(var(--max-width), 100% - (var(--container-padding) * 2));
   margin-inline: auto;
-  padding-block: 4rem;
+  padding-block: 3.5rem;
 }
 
 /* Header */
@@ -373,7 +373,7 @@ ul {
   justify-content: center;
   align-items: center;
   padding-top: 7.4rem;
-  padding-bottom: 4.5rem;
+  padding-bottom: 6rem;
   row-gap: 0.3rem;
 }
 
@@ -383,7 +383,7 @@ ul {
 
 .primary-intro-buttons > button {
   padding-block: 0.8rem;
-  margin-inline: 1rem;
+  margin-inline: 0.5rem;
   border-radius: 30px;
   text-align: center;
 }
@@ -421,12 +421,11 @@ ul {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
-  width: 77%;
 }
 
 .editor > h1 {
-  padding-top: 5rem;
-  padding-bottom: 4rem;
+  padding-top: 5.9rem;
+  padding-bottom: 3.6rem;
   text-align: center;
 }
 
@@ -434,12 +433,12 @@ ul {
   display: flex;
   flex-direction: column;
   row-gap: 4.5rem;
-  padding-bottom: 12.5rem;
+  padding-bottom: 12rem;
 }
 
 .editor-container p {
-  padding-top: 1.6rem;
-  line-height: 1.65rem;
+  padding-top: 1.7rem;
+  line-height: 1.7rem;
   letter-spacing: 0.01rem;
   word-spacing: 0.08rem;
   width: 53ch;
