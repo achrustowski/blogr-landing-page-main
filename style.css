@@ -171,6 +171,14 @@ svg {
 }
 
 /* Bg images */
+.bg-img-phones {
+  background: url(./images/illustration-phones.svg),
+    url(./images/bg-pattern-circles.svg),
+    linear-gradient(to right, rgba(44, 45, 63, 1) 0%, rgba(63, 65, 100, 1) 100%);
+  background-position: 10% 50%, -55% 90%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
 .bg-img-intro {
   background-image: url(./images/bg-pattern-intro-desktop.svg),
     linear-gradient(to left, rgba(255, 61, 84, 0.9), rgba(255, 143, 112, 1));
@@ -183,14 +191,7 @@ svg {
   background-position: 153% 50%;
   background-repeat: no-repeat;
   background-size: 63.75%;
-}
-.bg-img-phones {
-  background: url(./images/illustration-phones.svg),
-    url(./images/bg-pattern-circles.svg),
-    linear-gradient(to right, rgba(44, 45, 63, 1) 0%, rgba(63, 65, 100, 1) 100%);
-  background-position: 10% 50%, -55% 90%;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: auto;
+  background-color: transparent;
 }
 .bg-img-laptop {
   background-image: url(./images/illustration-laptop-desktop.svg);
@@ -377,6 +378,10 @@ ul {
   row-gap: 0.3rem;
 }
 
+.primary-intro h1 {
+  text-align: center;
+}
+
 .primary-intro-buttons {
   padding-top: 2rem;
 }
@@ -421,11 +426,12 @@ ul {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
+  z-index: 1;
 }
 
 .editor > h1 {
   padding-top: 5.9rem;
-  padding-bottom: 3.6rem;
+  padding-bottom: 3.8rem;
   text-align: center;
 }
 
@@ -433,7 +439,7 @@ ul {
   display: flex;
   flex-direction: column;
   row-gap: 4.5rem;
-  padding-bottom: 12rem;
+  padding-bottom: 13.5rem;
 }
 
 .editor-container p {
@@ -442,5 +448,24 @@ ul {
   letter-spacing: 0.01rem;
   word-spacing: 0.08rem;
   width: 53ch;
-  padding-right: 0.5rem;
+  padding-right: 1.2rem;
+}
+
+/* Phones section */
+.phones-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-block: 5rem;
+  z-index: 999;
+}
+
+.paragraph {
+  grid-column: 2;
+}
+
+.paragraph > p {
+  width: 54ch;
+  line-height: 1.7rem;
+  letter-spacing: 0.01rem;
+  word-spacing: 0.08rem;
 }
