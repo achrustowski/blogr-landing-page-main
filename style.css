@@ -44,7 +44,7 @@
   --fs-400: 1.125rem;
   --fs-500: 1.3rem;
   --fs-600: 1.7rem;
-  --fs-700: 2rem;
+  --fs-700: 2.25rem;
   --fs-750: 2.5rem;
   --fs-800: 3rem;
   --fs-900: 3.75rem;
@@ -169,16 +169,11 @@ svg {
 .bg-color-footer {
   background-color: var(--clr-neutral-400);
 }
+.bg-color-phones {
+  background-color: transparent;
+}
 
 /* Bg images */
-.bg-img-phones {
-  background: url(./images/illustration-phones.svg),
-    url(./images/bg-pattern-circles.svg),
-    linear-gradient(to right, rgba(44, 45, 63, 1) 0%, rgba(63, 65, 100, 1) 100%);
-  background-position: 10% 50%, -55% 90%;
-  background-repeat: no-repeat;
-  background-size: auto;
-}
 .bg-img-intro {
   background-image: url(./images/bg-pattern-intro-desktop.svg),
     linear-gradient(to left, rgba(255, 61, 84, 0.9), rgba(255, 143, 112, 1));
@@ -193,11 +188,18 @@ svg {
   background-size: 63.75%;
   background-color: transparent;
 }
+.bg-img-phones {
+  background: url(./images/bg-pattern-circles.svg),
+    linear-gradient(to right, rgba(44, 45, 63, 1) 0%, rgba(63, 65, 100, 1) 100%);
+  background-position: -50.2% 83%, -55% 90%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
 .bg-img-laptop {
   background-image: url(./images/illustration-laptop-desktop.svg);
-  background-position: -28% 50%;
+  background-position: -60.5% 50%;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 68%;
 }
 
 /* Font family */
@@ -288,6 +290,16 @@ ul {
   width: min(var(--max-width), 100% - (var(--container-padding) * 2));
   margin-inline: auto;
   padding-block: 3.5rem;
+}
+
+section:nth-of-type(1) {
+  border-radius: 0px 0px 0px 100px;
+}
+.bg-img-container {
+  border-radius: 0px 100px 0px 100px;
+}
+footer {
+  border-radius: 0px 100px 0px 0px;
 }
 
 /* Header */
@@ -447,25 +459,82 @@ ul {
   line-height: 1.7rem;
   letter-spacing: 0.01rem;
   word-spacing: 0.08rem;
-  width: 53ch;
-  padding-right: 1.2rem;
+  width: 55ch;
+  padding-right: 1.8rem;
 }
 
 /* Phones section */
 .phones-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-block: 5rem;
-  z-index: 999;
+  padding-top: 3.2rem;
+  padding-bottom: 3.5rem;
+  overflow: visible;
+  position: relative;
+  justify-items: flex-start;
+  /* column-gap: 4rem; */
 }
 
 .paragraph {
   grid-column: 2;
+  transform: translateX(3%);
+}
+
+.paragraph > h1 {
+  padding-bottom: 1.2rem;
 }
 
 .paragraph > p {
-  width: 54ch;
+  padding-right: 2rem;
   line-height: 1.7rem;
   letter-spacing: 0.01rem;
   word-spacing: 0.08rem;
+  opacity: 0.8;
+}
+
+.phones-container > img {
+  position: absolute;
+  transform: translateY(-21%) translateX(-8%);
+}
+
+/* Laptop section */
+.laptop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.laptop-container {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  row-gap: 4.7rem;
+  padding-block: 15.4rem;
+}
+
+.top p,
+.bottom p {
+  padding-top: 1.7rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.01rem;
+  word-spacing: 0.08rem;
+  width: 55ch;
+  padding-right: 1.8rem;
+}
+
+/* Footer */
+.primary-footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.primary-footer-wrapper h3 {
+  padding-bottom: 1.5rem;
+}
+
+.primary-footer-wrapper li {
+  padding-block: 0.3rem;
+  opacity: 0.8;
 }
