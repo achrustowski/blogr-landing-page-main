@@ -24,11 +24,12 @@
   --gr-body-200: #3f4164;
 
   /* Font families */
-  --ff-primary: 'Overpass', sans-serif;
-  --ff-secondary: 'Ubuntu', sans-serif;
+  --ff-primary: "Overpass", sans-serif;
+  --ff-secondary: "Ubuntu", sans-serif;
 
   /* Font primary weights */
   --fw-primary-300: 300;
+  --fw-primary-400: 400;
   --fw-primary-600: 600;
 
   /* Font secondary weights */
@@ -41,12 +42,12 @@
   --fs-200: 0.9rem;
   --fs-300: 1rem;
   --fs-400: 1.125rem;
-  --fs-500: 1.5rem;
-  --fs-600: 1.75rem;
+  --fs-500: 1.3rem;
+  --fs-600: 1.7rem;
   --fs-700: 2rem;
   --fs-750: 2.5rem;
   --fs-800: 3rem;
-  --fs-900: 3.5rem;
+  --fs-900: 3.75rem;
 }
 
 /* Box sizing rules */
@@ -64,8 +65,8 @@
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -146,11 +147,19 @@ svg {
 /* Bg gradients */
 .bg-gradient-intro {
   background-color: rgb(255, 61, 84);
-  background: linear-gradient(270deg, rgba(255, 61, 84, 1) 0%, rgba(255, 143, 112, 1) 100%);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 61, 84, 1) 0%,
+    rgba(255, 143, 112, 1) 100%
+  );
 }
 .bg-gradient-body {
   background: rgb(44, 45, 63);
-  background: linear-gradient(90deg, rgba(44, 45, 63, 1) 0%, rgba(63, 65, 100, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(44, 45, 63, 1) 0%,
+    rgba(63, 65, 100, 1) 100%
+  );
 }
 
 /* Bg colors */
@@ -165,18 +174,19 @@ svg {
 .bg-img-intro {
   background-image: url(./images/bg-pattern-intro-desktop.svg),
     linear-gradient(to left, rgba(255, 61, 84, 0.9), rgba(255, 143, 112, 1));
-  background-position: 22% 52%;
+  background-position: 25.5% 51.5%;
   background-repeat: no-repeat;
   background-size: auto;
 }
 .bg-img-editor {
   background-image: url(./images/illustration-editor-desktop.svg);
-  background-position: 120% 50%;
+  background-position: 153% 50%;
   background-repeat: no-repeat;
-  background-size: 40%;
+  background-size: 63%;
 }
 .bg-img-phones {
-  background: url(./images/illustration-phones.svg), url(./images/bg-pattern-circles.svg),
+  background: url(./images/illustration-phones.svg),
+    url(./images/bg-pattern-circles.svg),
     linear-gradient(to right, rgba(44, 45, 63, 1) 0%, rgba(63, 65, 100, 1) 100%);
   background-position: 10% 50%, -55% 90%;
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -200,6 +210,9 @@ svg {
 /* Font weights */
 .fw-primary-light {
   font-weight: var(--fw-primary-300);
+}
+.fw-primary-regular {
+  font-weight: var(--fw-primary-400);
 }
 .fw-primary-semi-bold {
   font-weight: var(--fw-primary-600);
@@ -256,6 +269,7 @@ svg {
 button {
   border: none;
   background: none;
+  line-height: 1.5rem;
 }
 
 a {
@@ -267,7 +281,7 @@ ul {
 }
 
 .container {
-  --max-width: 1440px;
+  --max-width: 1110px;
   --container-padding: 2rem;
 
   width: min(var(--max-width), 100% - (var(--container-padding) * 2));
@@ -289,13 +303,13 @@ ul {
 }
 
 .nav-wrapper {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  padding-left: 2.5rem;
+  padding-top: 0.5rem;
 }
 
 .primary-nav-list img {
   display: inline-block;
+  padding-inline: 0.4rem;
 }
 
 .primary-nav-list {
@@ -304,7 +318,130 @@ ul {
   justify-content: center;
 }
 
+.primary-nav-list > li {
+  padding-inline: 1rem;
+}
+
+.primary-nav-list > li > button:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  cursor: pointer;
+}
+
 .secondary-navigation {
   display: flex;
   position: absolute;
+}
+
+.header-flow-end {
+  padding-top: 0.5rem;
+}
+
+.header-flow-end > button {
+  padding-block: 0.8rem;
+  padding-inline: 2.5rem;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.header-flow-end > .login {
+  cursor: pointer;
+  color: var(--clr-neutral-100);
+}
+
+.header-flow-end > .sign-up {
+  cursor: pointer;
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-100);
+}
+
+.header-flow-end > .login:hover {
+  cursor: pointer;
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-200);
+}
+
+.header-flow-end > .sign-up:hover {
+  background-color: var(--clr-primary-200);
+  color: var(--clr-neutral-100);
+}
+
+/* Intro */
+.primary-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7.4rem;
+  padding-bottom: 4.5rem;
+  row-gap: 0.3rem;
+}
+
+.primary-intro-buttons {
+  padding-top: 2rem;
+}
+
+.primary-intro-buttons > button {
+  padding-block: 0.8rem;
+  margin-inline: 1rem;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.primary-intro-buttons > .start {
+  cursor: pointer;
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-primary-100);
+  padding-inline: 1rem;
+}
+
+.primary-intro-buttons > .learn {
+  cursor: pointer;
+  color: var(--clr-neutral-100);
+  border: 1px solid var(--clr-neutral-100);
+  padding-inline: 1.5rem;
+}
+
+.primary-intro-buttons > .start:hover {
+  cursor: pointer;
+  background-color: var(--clr-primary-200);
+  color: var(--clr-neutral-100);
+  padding-inline: 1rem;
+}
+
+.primary-intro-buttons > .learn:hover {
+  cursor: pointer;
+  color: var(--clr-primary-100);
+  background-color: var(--clr-neutral-100);
+  padding-inline: 1.5rem;
+}
+
+/* Editor section */
+.editor {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 77%;
+}
+
+.editor > h1 {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4.5rem;
+  padding-bottom: 12.5rem;
+}
+
+.editor-container p {
+  padding-top: 1.6rem;
+  line-height: 1.65rem;
+  letter-spacing: 0.01rem;
+  word-spacing: 0.08rem;
+  width: 53ch;
+  padding-right: 0.5rem;
 }
