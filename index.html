@@ -27,30 +27,42 @@
     <section class="bg-gradient-intro bg-img-intro">
       <div class="container">
         <header class="primary-header">
-          <div class="header-flow-start">
+          <div class="mobile-header">
             <a href="#"><img src="./images/logo.svg" alt="" /></a>
+            <button><img src="./images/icon-hamburger.svg" alt="" /></button>
+          </div>
+          <div class="header-flow-start">
+            <a href="#"
+              ><img src="./images/logo.svg" alt="" id="desktop-logo"
+            /></a>
             <div class="nav-wrapper">
               <nav class="primary-navigation">
                 <ul
                   class="primary-nav-list ff-primary fs-300 fw-primary-semi-bold"
                 >
                   <li>
-                    <button class="clr-neutral-100">Product</button>
+                    <button class="clr-neutral-100" id="product-btn">
+                      Product
+                    </button>
                     <img src="./images/icon-arrow-light.svg" alt="" />
                   </li>
                   <li>
-                    <button class="clr-neutral-100">Company</button>
+                    <button class="clr-neutral-100" id="company-btn">
+                      Company
+                    </button>
                     <img src="./images/icon-arrow-light.svg" alt="" />
                   </li>
                   <li>
-                    <button class="clr-neutral-100">Connect</button>
+                    <button class="clr-neutral-100" id="connect-btn">
+                      Connect
+                    </button>
                     <img src="./images/icon-arrow-light.svg" alt="" />
                   </li>
                 </ul>
               </nav>
-              <div class="secondary-navigation hidden">
-                <div class="mobile-nav-product">
-                  <ul class="ff-primary fs-200 fw-primary-light">
+              <div class="secondary-navigation">
+                <div class="mobile-nav hidden" id="product">
+                  <ul class="ff-primary fs-300 fw-primary-regular">
                     <li><a href="#" class="clr-primary-300">Overview</a></li>
                     <li><a href="#" class="clr-primary-300">Pricing</a></li>
                     <li><a href="#" class="clr-primary-300">Marketplace</a></li>
@@ -60,16 +72,16 @@
                     </li>
                   </ul>
                 </div>
-                <div class="mobile-nav-company">
-                  <ul class="ff-primary fs-200 fw-primary-light">
+                <div class="mobile-nav hidden" id="company">
+                  <ul class="ff-primary fs-300 fw-primary-regular">
                     <li><a href="#" class="clr-primary-300">About</a></li>
                     <li><a href="#" class="clr-primary-300">Team</a></li>
                     <li><a href="#" class="clr-primary-300">Blog</a></li>
                     <li><a href="#" class="clr-primary-300">Careers</a></li>
                   </ul>
                 </div>
-                <div class="mobile-nav-connect">
-                  <ul class="ff-primary fs-200 fw-primary-light">
+                <div class="mobile-nav hidden" id="connect">
+                  <ul class="ff-primary fs-300 fw-primary-regular">
                     <li><a href="#" class="clr-primary-300">Contact</a></li>
                     <li><a href="#" class="clr-primary-300">Newsletter</a></li>
                     <li><a href="#" class="clr-primary-300">LinkedIn</a></li>
@@ -107,6 +119,9 @@
           <h1 class="ff-primary fs-750 fw-primary-regular clr-primary-300">
             Designed for the future
           </h1>
+          <div class="mobile-bg-img">
+            <img src="./images/illustration-editor-mobile.svg" alt="" />
+          </div>
           <div class="editor-container">
             <div>
               <h2 class="ff-primary fs-600 fw-primary-regular clr-primary-300">
@@ -224,5 +239,6 @@
         </div>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
