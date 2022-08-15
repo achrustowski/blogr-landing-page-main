@@ -21,7 +21,11 @@ const connectArrowMobile = document.getElementById("connect-arrow-mobile");
 const hamburgerIcon = document.getElementById("hamburger-icon");
 const btnMobile = document.getElementById("btn-mobile");
 
+const mobileMenu = document.getElementById("mobile-menu");
+
 const productDropDown = document.getElementById("product-drop");
+const companyDropDown = document.getElementById("company-drop");
+const connectDropDown = document.getElementById("connect-drop");
 
 btnMobile.addEventListener("click", function () {
   if (!btnMobile.classList.contains("close-active")) {
@@ -31,6 +35,10 @@ btnMobile.addEventListener("click", function () {
     hamburgerIcon.src = "./images/icon-hamburger.svg";
     btnMobile.classList.remove("close-active");
   }
+});
+
+btnMobile.addEventListener("click", function () {
+  mobileMenu.classList.toggle("hidden");
 });
 
 productBtn.addEventListener("click", function () {
@@ -64,16 +72,27 @@ productBtnMobile.addEventListener("click", function () {
   connectArrowMobile.classList.remove("rotate");
 
   productDropDown.classList.toggle("hidden");
-  productDropDown.classList.toggle("product-drop-effect");
+  productDropDown.classList.toggle("float");
+  mobileMenu.classList.toggle("fix-product-height");
   companyBtnMobile.classList.toggle("product-menu-drop");
 });
 companyBtnMobile.addEventListener("click", function () {
   companyArrowMobile.classList.toggle("rotate");
   productArrowMobile.classList.remove("rotate");
   connectArrowMobile.classList.remove("rotate");
+
+  companyDropDown.classList.toggle("hidden");
+  companyDropDown.classList.toggle("float");
+  mobileMenu.classList.toggle("fix-company-height");
+  companyBtnMobile.classList.toggle("product-menu-drop");
 });
 connectBtnMobile.addEventListener("click", function () {
   connectArrowMobile.classList.toggle("rotate");
   companyArrowMobile.classList.remove("rotate");
   productArrowMobile.classList.remove("rotate");
+
+  connectDropDown.classList.toggle("hidden");
+  connectDropDown.classList.toggle("float");
+  mobileMenu.classList.toggle("fix-connect-height");
+  companyBtnMobile.classList.toggle("product-menu-drop");
 });

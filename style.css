@@ -362,6 +362,26 @@ svg {
   transform: rotate(180deg);
 }
 
+.float {
+  position: absolute;
+}
+
+.fix-product {
+  transform: translateY(70%);
+}
+
+.fix-product-height {
+  transform: translateY(61.7%);
+}
+
+.fix-company-height {
+  transform: translateY(62.6%);
+}
+
+.fix-connect-height {
+  transform: translateY(63.6%);
+}
+
 /* General styling */
 button {
   border: none;
@@ -1064,12 +1084,13 @@ footer {
     width: 100%;
     align-items: center;
     justify-content: center;
-    transform: translateY(60%);
+    /* transform: translateY(70%); */
     background-color: var(--clr-neutral-100);
     border-radius: 10px;
     text-align: center;
     padding-block: 1rem;
     z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   .mobile-menu-lists {
@@ -1158,32 +1179,35 @@ footer {
 }
 
 /* Mobile menu - drop down effect */
-.product-drop-effect {
+/* .product-drop-effect {
   transform: translateY(-50%);
-}
+} */
 
 @media (max-width: 50em) {
   .mobile-container {
     display: flex;
     flex-direction: column;
     position: relative;
+    row-gap: 1rem;
   }
 
   .drop-down {
-    background-color: rgb(200, 200, 203, 0.6);
+    background-color: rgb(200, 200, 203, 0.5);
     border-radius: 10px;
     padding-block: 0.5rem;
-    position: absolute;
     /* width: 100%; */
   }
 
   .drop-down li {
     padding-block: 0.5rem;
+    opacity: 0.8;
   }
 
-  .product-mobile-header,
-  .product-company-header,
-  .product-connect-header {
-    padding-bottom: 1rem;
+  .drop-down li:hover {
+    font-weight: var(--fw-secondary-500);
+  }
+
+  .mobile-header button {
+    cursor: pointer;
   }
 }
