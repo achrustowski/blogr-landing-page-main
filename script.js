@@ -18,6 +18,21 @@ const productArrowMobile = document.getElementById("product-arrow-mobile");
 const companyArrowMobile = document.getElementById("company-arrow-mobile");
 const connectArrowMobile = document.getElementById("connect-arrow-mobile");
 
+const hamburgerIcon = document.getElementById("hamburger-icon");
+const btnMobile = document.getElementById("btn-mobile");
+
+const productDropDown = document.getElementById("product-drop");
+
+btnMobile.addEventListener("click", function () {
+  if (!btnMobile.classList.contains("close-active")) {
+    hamburgerIcon.src = "./images/icon-close.svg";
+    btnMobile.classList.add("close-active");
+  } else if (btnMobile.classList.contains("close-active")) {
+    hamburgerIcon.src = "./images/icon-hamburger.svg";
+    btnMobile.classList.remove("close-active");
+  }
+});
+
 productBtn.addEventListener("click", function () {
   product.classList.toggle("hidden");
   company.classList.add("hidden");
@@ -26,7 +41,6 @@ productBtn.addEventListener("click", function () {
   companyArrow.classList.remove("rotate");
   connectArrow.classList.remove("rotate");
 });
-
 companyBtn.addEventListener("click", function () {
   company.classList.toggle("hidden");
   product.classList.add("hidden");
@@ -35,7 +49,6 @@ companyBtn.addEventListener("click", function () {
   productArrow.classList.remove("rotate");
   connectArrow.classList.remove("rotate");
 });
-
 connectBtn.addEventListener("click", function () {
   connect.classList.toggle("hidden");
   company.classList.add("hidden");
@@ -49,6 +62,10 @@ productBtnMobile.addEventListener("click", function () {
   productArrowMobile.classList.toggle("rotate");
   companyArrowMobile.classList.remove("rotate");
   connectArrowMobile.classList.remove("rotate");
+
+  productDropDown.classList.toggle("hidden");
+  productDropDown.classList.toggle("product-drop-effect");
+  companyBtnMobile.classList.toggle("product-menu-drop");
 });
 companyBtnMobile.addEventListener("click", function () {
   companyArrowMobile.classList.toggle("rotate");

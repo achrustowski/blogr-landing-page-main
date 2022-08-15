@@ -29,7 +29,13 @@
         <header class="primary-header">
           <div class="mobile-header">
             <a href="#"><img src="./images/logo.svg" alt="" /></a>
-            <button><img src="./images/icon-hamburger.svg" alt="" /></button>
+            <button id="btn-mobile">
+              <img
+                src="./images/icon-hamburger.svg"
+                alt=""
+                id="hamburger-icon"
+              />
+            </button>
           </div>
           <div class="header-flow-start">
             <a href="#"
@@ -115,74 +121,81 @@
           <div class="mobile-menu">
             <div class="mobile-menu-lists">
               <div class="mobile-menu-nav-list">
-                <ul
+                <div
                   class="secondary-nav-list ff-primary fs-300 fw-primary-semi-bold"
                 >
-                  <li>
-                    <button class="clr-primary-300" id="product-btn-mobile">
-                      Product
-                    </button>
-                    <img
-                      src="./images/icon-arrow-dark.svg"
-                      alt=""
-                      id="product-arrow-mobile"
-                    />
-                  </li>
-                  <li>
-                    <button class="clr-primary-300" id="company-btn-mobile">
-                      Company
-                    </button>
-                    <img
-                      src="./images/icon-arrow-dark.svg"
-                      alt=""
-                      id="company-arrow-mobile"
-                    />
-                  </li>
-                  <li>
-                    <button class="clr-primary-300" id="connect-btn-mobile">
-                      Connect
-                    </button>
-                    <img
-                      src="./images/icon-arrow-dark.svg"
-                      alt=""
-                      id="connect-arrow-mobile"
-                    />
-                  </li>
-                </ul>
-              </div>
-
-              <div class="mobile-menu-drop-list">
-                <div class="drop-down">
-                  <ul class="ff-primary fs-300 fw-primary-regular">
-                    <li><a href="#" class="clr-primary-300">Overview</a></li>
-                    <li><a href="#" class="clr-primary-300">Pricing</a></li>
-                    <li>
-                      <a href="#" class="clr-primary-300">Marketplace</a>
-                    </li>
-                    <li><a href="#" class="clr-primary-300">Features</a></li>
-                    <li>
-                      <a href="#" class="clr-primary-300">Integrations</a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="drop-down">
-                  <ul class="ff-primary fs-300 fw-primary-regular">
-                    <li><a href="#" class="clr-primary-300">About</a></li>
-                    <li><a href="#" class="clr-primary-300">Team</a></li>
-                    <li><a href="#" class="clr-primary-300">Blog</a></li>
-                    <li><a href="#" class="clr-primary-300">Careers</a></li>
-                  </ul>
-                </div>
-
-                <div class="drop-down">
-                  <ul class="ff-primary fs-300 fw-primary-regular">
-                    <li><a href="#" class="clr-primary-300">Contact</a></li>
-                    <li>
-                      <a href="#" class="clr-primary-300">Newsletter</a>
-                    </li>
-                    <li><a href="#" class="clr-primary-300">LinkedIn</a></li>
-                  </ul>
+                  <div class="product-mobile mobile-container">
+                    <div class="product-mobile-header">
+                      <button class="clr-primary-300" id="product-btn-mobile">
+                        Product
+                      </button>
+                      <img
+                        src="./images/icon-arrow-dark.svg"
+                        alt=""
+                        id="product-arrow-mobile"
+                      />
+                    </div>
+                    <div class="drop-down" id="product-drop">
+                      <ul class="ff-primary fs-300 fw-primary-regular">
+                        <li>
+                          <a href="#" class="clr-primary-300">Overview</a>
+                        </li>
+                        <li><a href="#" class="clr-primary-300">Pricing</a></li>
+                        <li>
+                          <a href="#" class="clr-primary-300">Marketplace</a>
+                        </li>
+                        <li>
+                          <a href="#" class="clr-primary-300">Features</a>
+                        </li>
+                        <li>
+                          <a href="#" class="clr-primary-300">Integrations</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="company-mobile mobile-container">
+                    <div class="company-mobile-header">
+                      <button class="clr-primary-300" id="company-btn-mobile">
+                        Company
+                      </button>
+                      <img
+                        src="./images/icon-arrow-dark.svg"
+                        alt=""
+                        id="company-arrow-mobile"
+                      />
+                    </div>
+                    <div class="drop-down" id="company-drop">
+                      <ul class="ff-primary fs-300 fw-primary-regular">
+                        <li><a href="#" class="clr-primary-300">About</a></li>
+                        <li><a href="#" class="clr-primary-300">Team</a></li>
+                        <li><a href="#" class="clr-primary-300">Blog</a></li>
+                        <li><a href="#" class="clr-primary-300">Careers</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="connect-mobile mobile-container">
+                    <div class="connect-mobile-header">
+                      <button class="clr-primary-300" id="connect-btn-mobile">
+                        Connect
+                      </button>
+                      <img
+                        src="./images/icon-arrow-dark.svg"
+                        alt=""
+                        id="connect-arrow-mobile"
+                      />
+                    </div>
+                    <div class="drop-down" id="connect-drop">
+                      <ul class="ff-primary fs-300 fw-primary-regular">
+                        <li><a href="#" class="clr-primary-300">Contact</a></li>
+                        <li>
+                          <a href="#" class="clr-primary-300">Newsletter</a>
+                        </li>
+                        <li>
+                          <a href="#" class="clr-primary-300">LinkedIn</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
