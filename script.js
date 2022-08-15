@@ -27,13 +27,28 @@ const productDropDown = document.getElementById("product-drop");
 const companyDropDown = document.getElementById("company-drop");
 const connectDropDown = document.getElementById("connect-drop");
 
+const startBtn = document.getElementById("start");
+const learnBtn = document.getElementById("learn");
+
 btnMobile.addEventListener("click", function () {
   if (!btnMobile.classList.contains("close-active")) {
     hamburgerIcon.src = "./images/icon-close.svg";
     btnMobile.classList.add("close-active");
+    startBtn.classList.add("hidden");
+    learnBtn.classList.add("hidden");
+    startBtn.classList.remove("z-index-999");
+    learnBtn.classList.remove("z-index-999");
+    startBtn.classList.add("z-index-1");
+    learnBtn.classList.add("z-index-1");
   } else if (btnMobile.classList.contains("close-active")) {
     hamburgerIcon.src = "./images/icon-hamburger.svg";
     btnMobile.classList.remove("close-active");
+    startBtn.classList.remove("hidden");
+    learnBtn.classList.remove("hidden");
+    startBtn.classList.remove("z-index-1");
+    learnBtn.classList.remove("z-index-1");
+    startBtn.classList.add("z-index-999");
+    learnBtn.classList.add("z-index-999");
   }
 });
 
@@ -73,9 +88,17 @@ productBtnMobile.addEventListener("click", function () {
 
   productDropDown.classList.toggle("hidden");
   productDropDown.classList.toggle("float");
+
+  companyDropDown.classList.add("hidden");
+  companyDropDown.classList.add("float");
+
+  connectDropDown.classList.add("hidden");
+  connectDropDown.classList.add("float");
+
   mobileMenu.classList.toggle("fix-product-height");
   companyBtnMobile.classList.toggle("product-menu-drop");
 });
+
 companyBtnMobile.addEventListener("click", function () {
   companyArrowMobile.classList.toggle("rotate");
   productArrowMobile.classList.remove("rotate");
@@ -83,16 +106,31 @@ companyBtnMobile.addEventListener("click", function () {
 
   companyDropDown.classList.toggle("hidden");
   companyDropDown.classList.toggle("float");
+
+  productDropDown.classList.add("hidden");
+  productDropDown.classList.add("float");
+
+  connectDropDown.classList.add("hidden");
+  connectDropDown.classList.add("float");
+
   mobileMenu.classList.toggle("fix-company-height");
   companyBtnMobile.classList.toggle("product-menu-drop");
 });
+
 connectBtnMobile.addEventListener("click", function () {
   connectArrowMobile.classList.toggle("rotate");
-  companyArrowMobile.classList.remove("rotate");
   productArrowMobile.classList.remove("rotate");
+  companyArrowMobile.classList.remove("rotate");
 
   connectDropDown.classList.toggle("hidden");
   connectDropDown.classList.toggle("float");
+
+  companyDropDown.classList.add("hidden");
+  companyDropDown.classList.add("float");
+
+  productDropDown.classList.add("hidden");
+  productDropDown.classList.add("float");
+
   mobileMenu.classList.toggle("fix-connect-height");
   companyBtnMobile.classList.toggle("product-menu-drop");
 });

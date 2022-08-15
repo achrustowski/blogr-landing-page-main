@@ -138,6 +138,7 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
@@ -382,6 +383,14 @@ svg {
   transform: translateY(63.6%);
 }
 
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-999 {
+  z-index: 999;
+}
+
 /* General styling */
 button {
   border: none;
@@ -599,14 +608,14 @@ footer {
   padding-inline: 1.5rem;
 }
 
-.primary-intro-buttons > .start:hover {
+.primary-intro-buttons > #start:hover {
   cursor: pointer;
   background-color: var(--clr-primary-200);
   color: var(--clr-neutral-100);
   padding-inline: 1rem;
 }
 
-.primary-intro-buttons > .learn:hover {
+.primary-intro-buttons > #learn:hover {
   cursor: pointer;
   color: var(--clr-primary-100);
   background-color: var(--clr-neutral-100);
@@ -637,16 +646,36 @@ footer {
   .primary-intro-buttons {
     padding-top: 2rem;
   }
-  .primary-intro-buttons > .start {
+  .primary-intro-buttons > #start {
     padding-inline: 1.3rem;
   }
-  .primary-intro-buttons > .learn {
+  .primary-intro-buttons > #learn {
+    padding-inline: 1.6rem;
+  }
+
+  .primary-intro-buttons > #start:hover {
+    cursor: pointer;
+    background-color: var(--clr-primary-200);
+    color: var(--clr-neutral-100);
+    padding-inline: 1.3rem;
+  }
+  .primary-intro-buttons > #learn:hover {
+    cursor: pointer;
+    color: var(--clr-primary-100);
+    background-color: var(--clr-neutral-100);
     padding-inline: 1.6rem;
   }
 
   .mobile-header > a > img {
     width: 90%;
     height: auto;
+  }
+}
+
+@media (min-width: 50em) {
+  #start,
+  #learn {
+    opacity: 1;
   }
 }
 
@@ -1084,7 +1113,7 @@ footer {
     width: 100%;
     align-items: center;
     justify-content: center;
-    /* transform: translateY(70%); */
+    /* transform: translateY(65%); */
     background-color: var(--clr-neutral-100);
     border-radius: 10px;
     text-align: center;
@@ -1209,5 +1238,16 @@ footer {
 
   .mobile-header button {
     cursor: pointer;
+  }
+}
+
+/* Fixing padding */
+.padding-inline {
+  padding-inline: 0rem;
+}
+
+@media (max-width: 55em) {
+  .padding-inline {
+    padding-inline: 1.5rem;
   }
 }
